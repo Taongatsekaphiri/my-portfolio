@@ -70,5 +70,117 @@ l{
 p2{
     padding:20px;
     margin: 0px;
-    text-colour: black;
+    color: black;
+}
+
+#slideshow {
+    position: relative;
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  #slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+  }
+  
+  #slideshow img.active {
+    opacity: 1;
+  }
+
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    border-style: solid;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #0e0303;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+
+#container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: palevioletred;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+
+
+.animated-header {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 7;
+  }
+}
+.progress-bar {
+  width: 30%;
+  height: 20px;
+  background-color: #0c0202;
+  border-radius: 20px;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  background-color: #d89606;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.progress2 {
+  width: 60%;
+  height: 100%;
+  background-color: #df7c0a;
+  border-radius: 5px;
+  transition: width 0.3s ease;
 }
