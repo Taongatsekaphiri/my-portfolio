@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css.css">
+<title>TAONGA TSEKA PHIRI</title>
+</head>
+<header>
+    <nav >
+        <ul>
+        <li><a href="skills.html" style="color:white"><l>SKILLS</l></ah></li>
+        <li><a href="about us.html" style="color:white"><l>ABOUT US </l></a></li>
+        <li><a href="project.html" style="color:white"><l>PROJECTS</l></a></li>
+        <li><a href="contact.html" style="color:white"><l>CONTACTS/l</a></li>
+  
+      </ul>
+    </nav>
+
+    <h2>TAONGA TSEKA PHIRI</h2>
+</header>
+
+<body>
+
+  <div id="slideshow" style="height: 300px; text-align: center;">
+    <img src="photo/app1.jpg" alt="Image 1">
+    <img src="photo/app2.jpg" alt="Image 2">
+    <img src="photo/tweb.jpg" al="Image 3">
+    <img src="photo/tweb2.jpg" al="Image 3">
+  </div>
+
+  <e id="greeting" class="animated-header" style="font-style: italic; font-family: fantasy; color: rgb(3, 58, 83);"></e>
+
+    <h1> about me 😊 </h1>
+    <img src="photo/Tao.jpg"width="350px" height="400"/><br>
+  <p class="blue-text">Hello,im Taonga Tseka Phiri  doing ICT at Mzuzu University.im passionate about<br>
+    about my study and im eager to take on a new challenge and learn new skills.On my free time i watch<br> 
+    korean series and play football.<br>
+    This is where i learn alot of things about my program<a href="https://StackOverflow.com">StackOverflows</a><br>
+  </p>
+
+  <section>
+   <h4>SKILLS</h4>
+<P2> .Programming skills<br>
+       .Technical profiency<br>
+      . problem solving <br>
+       .Database Management<br>
+       .Web development<br>
+   </P2>
+   <h5>EXPERIENCES</h5>
+   <P3>.Practical assignment<br>
+       .Team project<br>
+       .Personal project<br>
+       .laborotary work<br>
+
+<p2> For more nformation on skills and experiences go to<li><a href="skills.html">SKILLS</a> </li> </p2>
+   </P3>
+</section>
+
+   <section>
+   <h3>PROJECTS</h3>
+
+<p1>1. WEBSITE DEVELOPMENT: I designed and build a website for my portfolio<br>
+     then i upload it on github. <a href="http://taongatsekaphiri.github.io/my-portfolio/">MY portfolio</a> <br>
+     <br>
+     <img src="photo/tweb.jpg" width="360px">
+     <img src="photo/tweb2.jpg" width="360px"><br>
+    </p1>
+
+
+<p2> 2. MOBILE APP DEVELOPMENT:I develop a Fitness Tracking App.This app helps<br>
+     user track their fittness progress, set goals and stay motivated. This app <br>
+     allow users to record their workouts, monitor their nutrition, and track <br>
+     various fittness metrics. It provides a user-friendly interface with intuitive<br> 
+     navigation and visually appealing design. This is the link to the app<br>
+        <a href="https://www.bodymapp.co"> fitness band-fitness tracker</a><br>
+
+        <img src="photo/app1.jpg"width="360px"length="400"/>
+        <img src="photo/app2.jpg"width="360px"length="400"/><br>
+      </p2>
+   </section>
+
+   <form id="contact-form" method="POST" action="process-form.php">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+    <script src="script.js"></script> 
+
+	<h3>MySQLI CONNECTION</h3>
+          <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database_name = "my_data";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password,$database_name);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . $conn);
+}
+echo "Connected successfully";
+echo "<br>";
+
+
+// Query to retrieve data from a table
+$sql = "SELECT * FROM my_data";
+    
+// Execute the query
+$result = $conn->query($sql);
+
+// Check if any rows are returned
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        // Access specific column values
+        $column1 = $row["id"];
+        $column2 = $row["PASSWORD"];
+
+        // Do something with the retrieved data
+        echo "Column 1: " . $column1 . "<br>";
+        echo "Column 2: " . $column2 . "<br>";
+        echo "<br>";
+    }
+} else {
+    echo "No rows found.";
+}
+
+ 
+?>
+
+
+</body>
+
+<footer>
+    <h3> OUR CONTACTS</h3>
+    <h3> <img src="photo/whatsapp.PNG"width="40"length="45"/>  WhatsApp: 0998888020</h3>
+    <h3>Email:tsekaphiritaonga@gmail.com</h3><br>
+
+
+</footer>
+</html>
