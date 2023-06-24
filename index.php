@@ -6,10 +6,10 @@
 <header>
     <nav >
         <ul>
-        <li><a href="skills.html" style="color:white"><l>SKILLS</l></ah></li>
-        <li><a href="about us.html" style="color:white"><l>ABOUT US </l></a></li>
-        <li><a href="project.html" style="color:white"><l>PROJECTS</l></a></li>
-        <li><a href="contact.html" style="color:white"><l>CONTACTS/l</a></li>
+        <li><a href="skills.php" style="color:white"><l>SKILLS</l></ah></li>
+        <li><a href="about us.php" style="color:white"><l>ABOUT US </l></a></li>
+        <li><a href="project.php" style="color:white"><l>PROJECTS</l></a></li>
+        <li><a href="contact.php" style="color:white"><l>CONTACTS/l</a></li>
   
       </ul>
     </nav>
@@ -50,7 +50,7 @@
        .Personal project<br>
        .laborotary work<br>
 
-<p2> For more nformation on skills and experiences go to<li><a href="skills.html">SKILLS</a> </li> </p2>
+<p2> For more nformation on skills and experiences go to<li><a href="skills.php">SKILLS</a> </li> </p2>
    </P3>
 </section>
 
@@ -93,47 +93,7 @@
     <script src="script.js"></script> 
 
 	<h3>MySQLI CONNECTION</h3>
-          <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database_name = "my_data";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$database_name);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . $conn);
-}
-echo "Connected successfully";
-echo "<br>";
-
-
-// Query to retrieve data from a table
-$sql = "SELECT * FROM my_data";
-    
-// Execute the query
-$result = $conn->query($sql);
-
-// Check if any rows are returned
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while ($row = $result->fetch_assoc()) {
-        // Access specific column values
-        $column1 = $row["id"];
-        $column2 = $row["PASSWORD"];
-
-        // Do something with the retrieved data
-        echo "Column 1: " . $column1 . "<br>";
-        echo "Column 2: " . $column2 . "<br>";
-        echo "<br>";
-    }
-} else {
-    echo "No rows found.";
-}
-
- 
-?>
+   
 
 
 </body>
