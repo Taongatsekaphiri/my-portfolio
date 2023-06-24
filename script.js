@@ -21,11 +21,6 @@ setInterval(showNextImage, 2500); // Change the duration (in milliseconds) betwe
 
 
 
-
-
-
-
-
 //greeting code
 document.addEventListener("DOMContentLoaded", function() {
   var greetingElement = document.getElementById("greeting");
@@ -45,49 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   greetingElement.textContent = greeting;
 });
-
-
-
-// Function to initialize the map
-function initMap() {
-  // Create a new map instance
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10 // Set the initial zoom level
-  });
-
-  // Try HTML5 geolocation to get the user's current location
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var userLocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      // Center the map on the user's location
-      map.setCenter(userLocation);
-
-      // Add a marker at the user's location
-      var marker = new google.maps.Marker({
-        position: userLocation,
-        map: map,
-        title: 'Your Location'
-      });
-    }, function() {
-      handleLocationError(true, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support geolocation
-    handleLocationError(false, map.getCenter());
-  }
-}
-
-// Handle any geolocation errors
-function handleLocationError(browserHasGeolocation, userLocation) {
-  var errorMessage = browserHasGeolocation ?
-                      'Error: The Geolocation service failed.' :
-                      'Error: Your browser doesn\'t support geolocation.';
-  alert(errorMessage);
-}
 
 
 

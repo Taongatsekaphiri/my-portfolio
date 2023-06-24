@@ -74,7 +74,7 @@ p2{
 }
 
 #slideshow {
-    position: relative;
+  position: relative;
     text-align: center;
     height: 400px;
     overflow: hidden;
@@ -141,10 +141,6 @@ p2{
   background-color: palevioletred;
 }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
 
 
 
